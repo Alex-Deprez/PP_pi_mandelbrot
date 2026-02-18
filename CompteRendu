@@ -52,7 +52,16 @@ mandel_para_naif:
  avec 2 threads: 1.79513, 1.7919 et 1.79269 s
  avec 4 threads: 1.78703, 1.76444 et 1.78854 s
  avec 8 threads: 1.50842, 1.50426 et  1.50223 s
- avec 16 threads: 0.234633, 0.234442 et 0.234356 s
- avec 32 threads: 0.121307, 0.121325 et 0.121274 s
+ avec 16 threads: 0.937897 , 0.958069 et 0.956905 s
+ avec 32 threads: 0.562139, 0.541166 et 0.564525 s
 
+
+madel_dynamic : 
+
+avec 1 thread: 3.52177, 3.50272 et 3.50628 s 
+ avec 2 threads: 1.79219, 1.79435 et 1.79149 s
+ avec 4 threads: 0.941015,0.940526 et 0.939151 s 
+ avec 8 threads: 0.504925, 0.501726 et 0.506232 s
+ avec 16 threads: 0.30698, 0.306364 et 0.306576 s
+ avec 32 threads: 0.219303, 0.221155 et 0.219083 s
 
