@@ -64,4 +64,36 @@ avec 1 thread: 3.52177, 3.50272 et 3.50628 s
  avec 8 threads: 0.504925, 0.501726 et 0.506232 s
  avec 16 threads: 0.30698, 0.306364 et 0.306576 s
  avec 32 threads: 0.219303, 0.221155 et 0.219083 s
+ 
+mandel_open_mp avec (static, 1):
+avec 1 thread:
+ avec 2 threads:
+ avec 4 threads:
+ avec 8 threads: 
+ avec 16 threads:
 
+ mandel_open_mp avec (static, 100):
+avec 1 thread: 3.51471, 3.53717 et 3.50471 s
+ avec 2 threads: 1.79513, 1.7919 et 1.79269 s
+ avec 4 threads:  1.52916, 1.50418 et 1.53421 s
+ avec 8 threads: 1.53217,1.50485 et 1.51201 s
+ avec 16 threads: 1.53184, 1.50657 et 1.53629 s
+ avec 32 threads: resultat similaire a 1.5 pourquoi car ...
+
+
+
+ mandel_open_mp avec (dynamic, 1): 
+avec 1 thread:  3.60136, 3.50463, 3.50253 s 
+ avec 2 threads: 1.82835, 1.79276, 1.81696 s 
+ avec 4 threads: 0.937279, 0.939656, 0.93964 s
+ avec 8 threads: 0.499881, 0.488966, 0.481418 s 
+ avec 16 threads: 0.30745, 0.311686, 0.306479 s 
+ avec 32 threads: 0.205605, 0.205476, 0.205287 s
+
+ mandel_open_mp avec (dynamic, 10):
+ avec 1 thread : 3.54131, 3.50954, 3.61788 s 
+ avec 2 threads: 1.7901, 1.79265,  1.7915
+ avec 4 threads: 0.936216, 0.942163, 0.933537 s
+ avec 8 threads:  0.525132, 0.50085, 0.515957 s
+ avec 16 threads: 0.326709, 0.326042, 0.325863 s
+ avec 32 threads: 0.320956, 0.318786, 0.318839 // plus d'augmentation car ...
