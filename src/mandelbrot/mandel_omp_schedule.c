@@ -258,9 +258,7 @@ int main(int argc, char *argv[]) {
    * xmin, ymin, xinc, yinc, w, h, prof sont partagées en lecture seule.
    * ima est partagée en écriture (chaque itération écrit dans une case distincte).
    */
-  #pragma omp parallel for schedule(runtime) \
-      shared(ima, xmin, ymin, xinc, yinc, w, h, prof) \
-      default(none)
+  #pragma omp parallel for schedule(runtime)
   for (int i = 0; i < h; i++) {
     double y = ymin + i * yinc;
     for (int j = 0; j < w; j++) {
