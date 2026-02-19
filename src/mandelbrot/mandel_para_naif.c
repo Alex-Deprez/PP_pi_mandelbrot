@@ -266,7 +266,7 @@ int main(int argc, char *argv[]) {
     fprintf( stderr, "Erreur allocation mémoire du tableau \n");
     return 0;
   }
- #pragma omp parallel
+ #pragma omp parallel private(x,y)
   {
     int nb_threads = omp_get_num_threads();
     int thread_id = omp_get_thread_num();
@@ -276,10 +276,10 @@ int main(int argc, char *argv[]) {
     int fin = (thread_id == nb_threads - 1) ? h : (thread_id + 1) * lignes_par_thread;
 
     for (int i = debut; i < fin; i++) {  
-      double y = ymin + i * yinc; 
+      y = ymin + i * yinc; 
       
       for (int j = 0; j < w; j++) {
-        double x = xmin + j * xinc;
+        x = xmin + j * xinc;
         ima[j + i * w] = xy2color(x, y, prof); 
       }
     }

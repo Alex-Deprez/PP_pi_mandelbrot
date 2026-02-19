@@ -22,7 +22,7 @@
 #include <sys/time.h>
 #include <omp.h>
 
-#include "../pp_compte-rendu/rasterfile.h"
+#include "rasterfile.h"
 
 
 char info[] = "\
@@ -206,6 +206,8 @@ int main(int argc, char *argv[]) {
   int prof;
   /* Image resultat */
   unsigned char *ima;
+  /* Variables intermediaires */
+  double x, y;
   /* Chronometrage */
   double debut, fin;
 
@@ -258,11 +260,11 @@ int main(int argc, char *argv[]) {
    * xmin, ymin, xinc, yinc, w, h, prof sont partagées en lecture seule.
    * ima est partagée en écriture (chaque itération écrit dans une case distincte).
    */
-  #pragma omp parallel for schedule(runtime)
+  #pragma omp parallel for schedule(runtime) private(x,y)
   for (int i = 0; i < h; i++) {
-    double y = ymin + i * yinc;
+    y = ymin + i * yinc;
     for (int j = 0; j < w; j++) {
-      double x = xmin + j * xinc;
+      x = xmin + j * xinc;
       ima[j + i * w] = xy2color(x, y, prof);
     }
   }

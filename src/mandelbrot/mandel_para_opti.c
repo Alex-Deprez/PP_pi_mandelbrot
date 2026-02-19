@@ -227,7 +227,6 @@ int main(int argc, char *argv[]) {
   double x, y;
   /* Chronometrage */
   double debut, fin;
-  int ind_i ;
   /* debut du chronometrage */
   debut = my_gettimeofday();
 
